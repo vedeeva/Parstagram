@@ -104,7 +104,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="438" id="jDq-Je-zl6" userLabel="Post Cell" customClass="PostCell" customModule="Parstagram" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="438" id="jDq-Je-zl6" userLabel="Post Cell" customClass="PostCell" customModule="Parstagram" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="438"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jDq-Je-zl6" id="4yl-ow-nHk">
@@ -148,6 +148,42 @@
                                             <outlet property="captionLabel" destination="Xm2-Rl-k6e" id="Wnz-m3-S8e"/>
                                             <outlet property="photoView" destination="D63-cZ-OZO" id="yLf-Ox-g7k"/>
                                             <outlet property="usernameLabel" destination="mYQ-wg-1SG" id="JGo-IZ-AkN"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentCell" id="vgG-79-quM" customClass="CommentCell" customModule="Parstagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="466" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vgG-79-quM" id="Sfq-zb-eal">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0K-FN-nPJ">
+                                                    <rect key="frame" x="16" y="8" width="0.0" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6s-rX-HuI">
+                                                    <rect key="frame" x="-8" y="8" width="0.0" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="S6s-rX-HuI" firstAttribute="top" secondItem="Sfq-zb-eal" secondAttribute="top" constant="8" id="1vQ-fZ-Dvv"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="w0K-FN-nPJ" secondAttribute="bottom" constant="8" id="Fhr-LL-rb6"/>
+                                                <constraint firstItem="w0K-FN-nPJ" firstAttribute="top" secondItem="Sfq-zb-eal" secondAttribute="top" constant="8" id="ONW-5Q-VIC"/>
+                                                <constraint firstItem="S6s-rX-HuI" firstAttribute="leading" secondItem="w0K-FN-nPJ" secondAttribute="trailing" constant="8" id="Qt8-YM-eyZ"/>
+                                                <constraint firstItem="w0K-FN-nPJ" firstAttribute="leading" secondItem="Sfq-zb-eal" secondAttribute="leading" constant="16" id="Xm4-8z-kyQ"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="S6s-rX-HuI" secondAttribute="trailing" constant="8" id="exw-5a-h3G"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="S6s-rX-HuI" secondAttribute="bottom" constant="8" id="l5N-7c-owD"/>
+                                                <constraint firstItem="S6s-rX-HuI" firstAttribute="leading" secondItem="w0K-FN-nPJ" secondAttribute="trailing" constant="8" id="rla-YX-Zpg"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="commentLabel" destination="S6s-rX-HuI" id="QZG-st-3hh"/>
+                                            <outlet property="nameLabel" destination="w0K-FN-nPJ" id="IIh-Cz-vfs"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
